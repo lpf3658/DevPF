@@ -7,15 +7,6 @@ namespace DevPF.Model
     {
     }
 
-    public class SearchDeviceResult : IBase
-    {
-        public List<int> SiteIds
-        {
-            get;
-            set;
-        }
-    }
-
     public class SendReceive : IBase
     {
         [JsonProperty("sendStr")]

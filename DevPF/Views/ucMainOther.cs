@@ -23,10 +23,10 @@ namespace DevPF.Views
         private void btnFindEquipment_Click(object sender, EventArgs e)
         {
             this.cmbEquipment.Properties.Items.Clear();
-            ResultClass<SearchDeviceResult> searchResultClass = CommonMethods.SearchDeviceInfo();
+            ResultClass<List<int>> searchResultClass = CommonMethods.SearchDeviceInfo();
             if (searchResultClass.Result)
             {
-                foreach (int siteid in searchResultClass.ResultInfo.SiteIds)
+                foreach (int siteid in searchResultClass.ResultInfo)
                 {
                     this.cmbEquipment.Properties.Items.Add(siteid);
                 }

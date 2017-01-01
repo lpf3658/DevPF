@@ -49,14 +49,14 @@ namespace DevPF.Utils
             return JsonConvert.DeserializeObject<ResultClass<string>>(result.ToString());
         }
 
-        public static ResultClass<SearchDeviceResult> SearchDeviceInfo()
+        public static ResultClass<List<int>> SearchDeviceInfo()
         {
             SearchDevice searchDevice = new SearchDevice();
             object result = WsHelper.InvokeWebService( MethodConstants.BASEURL, "SearchDevice", new object[]
 			{
 				JsonConvert.SerializeObject(searchDevice)
 			});
-            return JsonConvert.DeserializeObject<ResultClass<SearchDeviceResult>>(result.ToString());
+            return JsonConvert.DeserializeObject<ResultClass<List<int>>>(result.ToString());
         }
 
         public static ResultClass<DeviceClassResult> ConnectDeviceInfo(int device, int flag)

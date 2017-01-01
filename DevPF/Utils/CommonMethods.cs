@@ -8,7 +8,6 @@ namespace DevPF.Utils
 {
     public class CommonMethods
     {
-        
         public static ResultClass<string> Login(string username, string password)
         {
            

@@ -5,6 +5,9 @@ namespace DevPF.Model
 {
     public class ResultClass<T>
     {
+        /// <summary>
+        /// 是否成功
+        /// </summary>
         [JsonProperty("result")]
         public bool Result
         {
@@ -12,6 +15,9 @@ namespace DevPF.Model
             set;
         }
 
+        /// <summary>
+        /// 返回信息
+        /// </summary>
         [JsonProperty("msg")]
         public string Message
         {
@@ -19,6 +25,9 @@ namespace DevPF.Model
             set;
         }
 
+        /// <summary>
+        /// 返回结果，结构可能为空
+        /// </summary>
         [JsonProperty("data")]
         public T ResultInfo
         {
